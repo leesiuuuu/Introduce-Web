@@ -4,8 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+    <link rel="stylesheet" href="element.css">
 </head>
 <body>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <h1>hello!</h1>
+    <section data-scroll>
+        <h1 class = "title">반갑습니다</h1>
+        <p>안녕하세요, 프론트와 디자인을 전공하고 싶은 이시우 입니다! <br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+        </p>  
+    </section>
+
+    <section data-scroll>
+        <h1 class = "title">반갑습니다</h1>
+        <p>안녕하세요, 프론트와 디자인을 전공하고 싶은 이시우 입니다!<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+            이거나드셔ㅗ<br>
+
+        </p>  
+    </section>
+
+    <section data-scroll>
+        <h1 class = "title">반갑습니다</h1>
+        <p>안녕하세요, 프론트와 디자인을 전공하고 싶은 이시우 입니다!
+        </p>  
+    </section>
+
+    <script>
+        ScrollOut({
+            once: false,
+            onShown: function(element){
+                new TypeIt(element.querySelector('.title'), {
+                    startDelay: 200,
+                    cursor: false,
+                })
+                element.animate([{ opacity: 0 }, { opacity: 1 }], 1000);
+            },
+            onHidden: function(element){
+                element.style.opacity = 0;
+            }
+        });
+    </script>
 </body>
 </html>
